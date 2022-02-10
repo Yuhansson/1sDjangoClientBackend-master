@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'rest_framework_simplejwt.token_blacklist',
     'catalogs.apps.CatalogsConfig',
     'price.apps.PriceConfig',
+    'django_filters',
 )
 
 MIDDLEWARE = [
@@ -141,6 +142,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 
 
